@@ -1,0 +1,90 @@
+body {
+  background-image: url("../png/bright_back.png");
+}
+
+.balance_field {
+  position: absolute;
+}
+
+.home {
+  position: absolute;
+  right: 10px;
+}
+
+.slot_back {
+  background-image: url("../png/slot_box.png");
+  background-size: cover;
+  position: relative;
+  margin: auto;
+
+  width: 468px;
+  height: 281px;
+}
+
+.slot_cont {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  left: 100px;
+}
+
+.slot_cont {
+  justify-content: center;
+}
+
+.slot {
+  position: relative;
+  overflow: hidden;
+  width: 90px;
+  height: 240px;
+}
+
+.slot_pics > div {
+  margin: 7.5px 12.5px 7.5px;
+  width: 65px;
+  height: 65px;
+}
+
+.slot_cont img {
+  max-width: 65px;
+  max-height: 65px;
+}
+
+.slot_pics {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+
+  position: absolute;
+  top: 0;
+
+  transition: top 4s ease;
+}
+
+.pic_left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 210px;
+  height: 300px;
+}
+
+.pic_right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  width: 150px;
+  height: 215px;
+}
+
+.spin {
+  right: 10px;
+  top: 20%;
+}
+
+.bet_button {
+  right: 10px;
+  top: 45%;
+}

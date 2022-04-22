@@ -1,0 +1,14 @@
+.text {
+  width: 700px;
+  height: 340px;
+  overflow: scroll;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.play {
+  right: 10px;
+  bottom: 10px;
+}

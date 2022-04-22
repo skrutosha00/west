@@ -1,0 +1,55 @@
+.card_cont,
+.header {
+  width: 85%;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_cont {
+  margin-top: 25px;
+}
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 260px;
+}
+
+.card > img {
+  max-width: 125px;
+  max-height: 125px;
+
+  transition: transform 0.5s ease;
+}
+
+.pic.anim {
+  transform: rotate(15deg);
+}
+
+.price_cont {
+  display: flex;
+  position: relative;
+
+  width: 112px;
+  height: 40px;
+
+  font-size: 14px;
+  background: #669e0b;
+  opacity: 0.8;
+  border: 3px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.price_cont img {
+  width: 50px;
+  height: 50px;
+
+  position: absolute;
+  left: -10px;
+}

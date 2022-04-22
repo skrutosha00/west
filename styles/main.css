@@ -1,0 +1,86 @@
+.balance_field {
+  margin-left: 75%;
+}
+
+.menu {
+  margin: auto;
+  width: 60%;
+
+  align-items: flex-end;
+}
+
+.card {
+  width: 169px;
+  height: 197px;
+
+  position: relative;
+
+  background: linear-gradient(180deg, #c57600 0%, #fcff54 100%);
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+
+.card * {
+  position: absolute;
+}
+
+.card .aboba {
+  width: 126px;
+  height: 149px;
+  left: 0;
+  top: 20%;
+}
+
+.card .bottle {
+  width: 85.7px;
+  height: 85.7px;
+
+  right: 0;
+
+  transform: rotate(-15deg);
+  transition: transform 0.5s ease;
+}
+
+.card .bottle.anim {
+    transform: rotate(20deg);
+}
+
+.card .mask {
+  width: 100px;
+  height: 152px;
+
+  left: calc(50% - 53px);
+  top: calc(50% - 76px);
+}
+
+.card a {
+  left: calc(50% - 35px);
+  top: 85%;
+}
+
+.card .text {
+  font-size: 22px;
+  width: 100%;
+  text-align: center;
+}
+
+.shop {
+  width: 113px;
+  height: 131px;
+
+  background: linear-gradient(180deg, #669e0b 0%, #77f163 100%);
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+.shop img {
+  width: 88px;
+  height: 62px;
+  margin: auto;
+}

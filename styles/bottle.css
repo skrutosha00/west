@@ -1,0 +1,142 @@
+body {
+  background-image: url("../png/bright_back.png");
+  margin: 0;
+
+  width: 800px;
+  height: 360px;
+}
+
+.header {
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
+.center {
+  align-items: baseline;
+}
+
+img,
+.c {
+  z-index: -1;
+}
+
+.table {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottle {
+  position: absolute;
+  left: calc(50% - 75px);
+  bottom: 35px;
+
+  height: 150px;
+  width: 150px;
+
+  z-index: 1;
+
+  transition: transform 2s ease;
+}
+
+img.snowcat {
+  position: absolute;
+  left: -10px;
+  bottom: 35px;
+
+  height: 170px;
+  width: 170px;
+}
+
+div.snowcat {
+  position: absolute;
+  left: 15px;
+  bottom: 200px;
+}
+
+img.buffalo {
+  position: absolute;
+  left: 125px;
+  bottom: 85px;
+
+  height: 220px;
+  width: 145px;
+}
+
+div.buffalo {
+  position: absolute;
+  left: 195px;
+  bottom: 250px;
+}
+
+img.aboba {
+  position: absolute;
+  left: 250px;
+  bottom: 120px;
+
+  height: 240px;
+  width: 200px;
+}
+
+div.aboba {
+  position: absolute;
+  left: 330px;
+  bottom: 280px;
+}
+
+img.mery {
+  position: absolute;
+  left: 410px;
+  bottom: 80px;
+
+  height: 240px;
+  width: 240px;
+}
+
+div.mery {
+  position: absolute;
+  left: 520px;
+  bottom: 300px;
+}
+
+.c {
+  position: absolute;
+  left: 600px;
+  bottom: 40px;
+
+  height: 240px;
+  width: 200px;
+  overflow: hidden;
+}
+
+img.cardking {
+  height: 240px;
+  width: 240px;
+}
+
+div.cardking {
+  position: absolute;
+  left: 650px;
+  bottom: 250px;
+}
+
+.pers {
+  transition: transform 0.5s ease;
+}
+
+.anim.pers {
+  transform: rotate(15deg);
+}
+
+.control {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.bet_button {
+  left: 30px;
+  bottom: 10px;
+}
