@@ -1,8 +1,8 @@
 import { animate, animateOnce } from "./animate.js"
 
 let players = [
-    { name: "mery", cf: 70, cfStart: 2, angle: 130 },
-    { name: "buffalo", cf: 10, cfStart: 0, angle: 20 },
+    { name: "mery", cf: 70, cfStart: 0, angle: 130 },
+    { name: "buffalo", cf: 10, cfStart: 3, angle: 20 },
     { name: "cardking", cf: 15, cfStart: 4, angle: 170 },
     { name: "snowcat", cf: 25, cfStart: 0, angle: 0 },
     { name: "aboba", cf: 25, cfStart: 3, angle: 50 }
@@ -101,15 +101,17 @@ function betSingle() {
     let prize = Number(bet.innerHTML) * player.cfTotal
 
     setTimeout(() => {
-        changeBalance(prize)
-        animateOnce('.balance')
+        if (prize) {
+            changeBalance(prize)
+            animateOnce('.balance')
+        }
     }, 2100);
 
     setTimeout(() => {
 
         bottle.style.transform = 'rotate(90deg)'
 
-        warning.firstElementChild.innerHTML = 'Congrats!<br/>You have won ' + prize
+        warning.firstElementChild.innerHTML = prize ? 'Congrats!<br/>You have won ' + prize : 'No way!!<br/>Try again right now'
         warning.style.left = '200px'
     }, 2500);
 }
