@@ -9,6 +9,7 @@ for (let i = 0; i < 8; i++) {
 }
 
 let active = true
+let autoMode = false
 
 for (let i = 0; i < 3; i++) {
 
@@ -31,35 +32,56 @@ let slotPicsNodes = document.querySelectorAll('.slot_pics')
 let bet = document.querySelector('.bet')
 let plus = document.querySelector('.plus')
 let minus = document.querySelector('.minus')
+let auto = document.querySelector('.spin')
 
 let warning = document.querySelector('.warning')
-let playAgain = document.querySelector('.warning .button')
+let playAgainButton = document.querySelector('.warning .button')
 
 plus.onclick = () => {
-    if (Number(bet.innerHTML) + 50 > Number(balance.innerHTML) || !active) { return }
+    if (Number(bet.innerHTML) + 50 > Number(balance.innerHTML) || !active || autoMode) { return }
     bet.innerHTML = Number(bet.innerHTML) + 50
 }
 
 minus.onclick = () => {
-    if (!active) { return }
+    if (!active || autoMode) { return }
     bet.innerHTML = 0
 }
 
-playAgain.onclick = () => {
-
-    for (let slotPics of slotPicsNodes) {
-        slotPics.style.transition = 'none'
-        slotPics.innerHTML = ''
-        slotPics.style.top = 0
-        generatePics(slotPics, 3)
-    }
-
-    warning.style.left = '-50%'
-    active = true
+playAgainButton.onclick = () => {
+    if (autoMode) { return }
+    playAgain()
 }
 
 betButton.onclick = () => {
+    if (autoMode) { return }
     betSingle()
+}
+
+auto.onclick = () => {
+    if (bet.innerHTML == 0 || !active || autoMode) { return }
+
+    let count = 1
+    autoMode = true
+    auto.classList.add('active')
+
+    betSingle()
+    setTimeout(() => {
+        playAgain()
+    }, 5500);
+
+    let autoInterval = setInterval(() => {
+        if (count < 10) {
+            betSingle()
+            setTimeout(() => {
+                playAgain()
+            }, 5500);
+            count += 1
+        } else {
+            clearInterval(autoInterval)
+            autoMode = false
+            auto.classList.remove('active')
+        }
+    }, 7500);
 }
 
 function betSingle() {
@@ -93,6 +115,18 @@ function betSingle() {
         warning.firstElementChild.innerHTML = r == 1 ? 'Congrats!<br/>You have won ' + prize : 'No way!<br/>Try again right now'
         warning.style.left = '200px'
     }, 4500);
+}
+
+function playAgain() {
+    for (let slotPics of slotPicsNodes) {
+        slotPics.style.transition = 'none'
+        slotPics.innerHTML = ''
+        slotPics.style.top = 0
+        generatePics(slotPics, 3)
+    }
+
+    warning.style.left = '-50%'
+    active = true
 }
 
 function generatePics(slotPics, count, r, winSlot, ind, order) {

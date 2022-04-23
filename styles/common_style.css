@@ -188,3 +188,14 @@ a {
   height: 59px;
   line-height: 59px;
 }
+
+.spin.active {
+  box-shadow: inset 0 0 5px #fff;
+  animation: rotate linear 2s infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -140,3 +140,14 @@ div.cardking {
   left: 30px;
   bottom: 10px;
 }
+
+.spin.center {
+  align-items: center;
+
+  position: absolute;
+  left: 160px;
+  bottom: 10px;
+
+  transition: transform 2s ease;
+}
+
